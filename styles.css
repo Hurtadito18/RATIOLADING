@@ -1,0 +1,287 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f7f7f7;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* Header - Más grande */
+header {
+  background: #ff3366;
+  padding: 2em 1em;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.75em;
+  font-size: 1em;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://i.postimg.cc/DWmvHXwG/Leonardo-Phoenix-10-Create-a-background-image-for-a-landing-pa-0.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 3em 1em;
+  text-align: center;
+  position: relative;
+}
+
+/* Overlay modificado para usar el mismo tono del footer (#444) */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(68, 68, 68, 0.7);
+  z-index: 1;
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.cta {
+  display: inline-block;
+  background: #ff3366;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  margin-top: 1em;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.cta:hover {
+  background: #e62e5c;
+}
+
+/* Sección Resultados */
+.results {
+  background: #2c3e50;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.results a {
+  color: #ff3366;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Grid Container para las Tarjetas */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5em;
+  padding: 2em 1em;
+}
+
+/* Tarjetas (Boxes) */
+.box-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.info-box {
+  position: relative;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto de iluminación al pasar el cursor */
+.info-box::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: rgba(255, 51, 102, 0.2);
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+.info-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.info-box:hover::before {
+  opacity: 1;
+}
+
+.info-box h2 {
+  margin-bottom: 0.5em;
+  color: #ff3366;
+  font-size: 1.8em;
+}
+
+.info-box p {
+  margin: 1em 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.info-box ul {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.info-box li {
+  margin: 0.5em 0;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.info-box li i {
+  color: #ff3366;
+  margin-right: 0.5em;
+}
+
+/* Imágenes de Sección */
+.section-image {
+  max-width: 100%;
+  height: auto;
+  margin: 1em 0;
+  border-radius: 5px;
+}
+
+/* Sección Acerca de Nosotros */
+.about-section {
+  background: #fff;
+  padding: 2em 1em;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content h2 {
+  font-size: 2em;
+  color: #ff3366;
+  margin-bottom: 0.75em;
+}
+
+.about-content p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  background: #444;
+  color: #fff;
+  padding: 2em 1em;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.footer-content p {
+  margin-bottom: 1em;
+}
+
+.footer-whatsapp {
+  display: inline-block;
+  background: #25D366;
+  color: #fff;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.footer-whatsapp:hover {
+  background: #1ebe5d;
+}
+
+footer .social {
+  margin-top: 1em;
+}
+
+footer .social a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5em;
+  font-size: 1.2em;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  header nav a {
+    margin: 0.5em;
+  }
+  
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
